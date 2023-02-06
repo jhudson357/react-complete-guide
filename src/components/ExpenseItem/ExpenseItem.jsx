@@ -1,12 +1,14 @@
 import './ExpenseItem.css'
+import ExpenseDate from '../ExpenseDate/ExpenseDate'
 
-const ExpenseItem = () => {
+const ExpenseItem = ({title, amount, date}) => {
+
   return (
     <div className='expense-item'>
-      <div>Dec. 23, 2022</div>
+      <ExpenseDate date = {date}/>
       <div className='expense-item__description'>
-        <h2>Car Insurance</h2>
-        <div className='expense-item__price'>$315.85</div>
+        <h2>{title}</h2>
+        <div className='expense-item__price'>${amount}</div>
       </div>
     </div>
   )
